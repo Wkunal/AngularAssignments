@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let product of products | slice : startIndex : endIndex">
+        <h2>{{product.name}}</h2>
+        <img [src]="product.imageUrl" alt="img" width="150px"/>
+    </div>
+</div>
+<div>
+    <button type="button" (click)="previousPage()">Previous</button>
+    <button type="button" (click)="nextPage()">Next</button>
+</div>
